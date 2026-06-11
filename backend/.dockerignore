@@ -4,3 +4,10 @@ __pycache__/
 db.sqlite3
 .git
 .gitignore
+
+# Keep secrets OUT of the image. COPY . . would otherwise bake .env into a
+# layer; env vars must be injected at run time (docker run --env-file), not
+# built in. .env.example has no secrets and is allowed in.
+.env
+.env.*
+!.env.example

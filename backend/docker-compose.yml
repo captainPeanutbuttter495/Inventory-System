@@ -13,6 +13,13 @@ services:
   web:
     build: .
     env_file: .env
+    # Bind-mount the source into the container so files Django GENERATES
+    # (migrations!) land in the repo on the host, not in the container's
+    # throwaway layer — and so code edits hot-reload via runserver.
+    # Installed packages live in the image's site-packages, outside /app,
+    # so this mount doesn't shadow them.
+    volumes:
+      - .:/app
     ports:
       - "8000:8000"
     depends_on:

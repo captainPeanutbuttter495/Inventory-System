@@ -26,5 +26,19 @@ services:
       db:
         condition: service_healthy
 
+  frontend:
+    # Build context is the sibling frontend/ dir (relative to this compose file).
+    build:
+      context: ../frontend
+      args:
+        # Baked into the bundle at build time. localhost:8000 because the browser
+        # — not this container — makes the API calls and reaches Django via the
+        # host-published port, not the "web" service name.
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - web
+
 volumes:
   pgdata:

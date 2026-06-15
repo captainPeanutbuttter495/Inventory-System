@@ -36,6 +36,17 @@ DEBUG = os.environ.get('DEBUG', 'False').lower() in ('true', '1', 'yes')
 # The filter drops empty strings so an unset var yields [] rather than ['']
 ALLOWED_HOSTS = [h for h in os.environ.get('ALLOWED_HOSTS', '').split(',') if h]
 
+# Which browser origins may call this API (CORS). The Next.js dev server runs at
+# http://localhost:3000, so that's the local default. Like ALLOWED_HOSTS this is
+# env-driven on purpose: the correct value differs between local and deploy, which
+# is exactly the kind of "passes locally / breaks deployed" gap this phase explores.
+CORS_ALLOWED_ORIGINS = [
+    o for o in os.environ.get(
+        'CORS_ALLOWED_ORIGINS',
+        'http://localhost:3000,http://127.0.0.1:3000',
+    ).split(',') if o
+]
+
 
 # Application definition
 
@@ -47,11 +58,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'api',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    # CorsMiddleware must sit as high as possible — it has to add the
+    # Access-Control-* headers before CommonMiddleware can short-circuit
+    # the request (e.g. on redirects).
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

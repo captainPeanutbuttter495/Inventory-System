@@ -2,13 +2,9 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
-      - staging
+    branches: [main, staging]
   pull_request:
-    branches:
-      - main
-      - staging
+    branches: [main, staging]
 
 jobs:
   test:
@@ -20,7 +16,7 @@ jobs:
         env:
           POSTGRES_DB: inventory
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_HOST_AUTH_METHOD: trust
         ports:
           - 5432:5432
         options: >-
@@ -30,10 +26,8 @@ jobs:
           --health-retries=5
 
     env:
-      SECRET_KEY: ci-not-a-real-secret
       POSTGRES_DB: inventory
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
       POSTGRES_HOST: localhost
       POSTGRES_PORT: "5432"
 
@@ -52,6 +46,11 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Generate ephemeral environment values
+        run: |
+          echo "SECRET_KEY=$(python -c 'import secrets; print(secrets.token_urlsafe(50))')" >> "$GITHUB_ENV"
+          echo "POSTGRES_PASSWORD=$(python -c 'import secrets; print(secrets.token_urlsafe(24))')" >> "$GITHUB_ENV"
 
       - name: Run tests
         run: python manage.py test api

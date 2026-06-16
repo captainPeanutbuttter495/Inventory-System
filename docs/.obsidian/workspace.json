@@ -1,0 +1,210 @@
+{
+  "main": {
+    "id": "b6ab29953ecca0b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "01c0f76f923e019a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6e826d5c9fcadc8a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "How This Transfers - vip-website.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "How This Transfers - vip-website"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0eb6df0ecca0ff42",
+    "type": "split",
+    "children": [
+      {
+        "id": "3add2fb40237f38a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6ef1365248e7b9be",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "4627fcbe60613389",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ad0b2864685d0bd7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1dc35c0ba8c2a07a",
+    "type": "split",
+    "children": [
+      {
+        "id": "69bc4bd6537298ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "165a00f2085535e6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Phase 3 - docker-compose + Postgres.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Phase 3 - docker-compose + Postgres"
+            }
+          },
+          {
+            "id": "726a8c64e272c8fc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Phase 3 - docker-compose + Postgres.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Phase 3 - docker-compose + Postgres"
+            }
+          },
+          {
+            "id": "0e6913e9059cb493",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "aa9f3002fad2d178",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "72cedebb8fdaebc8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Phase 3 - docker-compose + Postgres.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Phase 3 - docker-compose + Postgres"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "6e826d5c9fcadc8a",
+  "lastOpenFiles": [
+    "Home.md",
+    "Standup Summary.md",
+    "Home.md.tmp.3336.4e7be53fe0ba",
+    "My Backend Role - Tasks, Suggestions & Prep.md",
+    "My Backend Role - Tasks, Suggestions & Prep.md.tmp.3336.9d7e44887a77",
+    "Phase 2 - Docker.md",
+    "Home.md.tmp.27236.1cb217a5610c",
+    "How This Transfers - vip-website.md",
+    "How This Transfers - vip-website.md.tmp.27236.cb1965cea411",
+    "Phase 4 - CI-CD GitHub Actions.md",
+    "Home.md.tmp.27236.de433542d34f",
+    "Standup Summary.md.tmp.27236.a7290070b673",
+    "Home.md.tmp.27236.e9ae138ad0d2",
+    "Phases Overview.md.tmp.27236.ba8ca9d2f44a",
+    "Phases Overview.md.tmp.27236.6d2e093fe062",
+    "Phase 5 - Playwright E2E.md",
+    "Phase 5 - Playwright E2E.md.tmp.27236.e86a80a6dfd0",
+    "Phase 3 - docker-compose + Postgres.md",
+    "_templates/Phase Note Template.md",
+    "Phase 1 - Django Base.md",
+    "Phases Overview.md"
+  ]
+}
